@@ -1,0 +1,36 @@
+{
+  "name": "js-mapper",
+  "version": "1.0.0",
+  "description": "A simple data mapper to javascript",
+  "main": "index.js",
+  "scripts": {
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch",
+    "test": "jest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloAlexandre/js-mapper.git"
+  },
+  "keywords": [
+    "mapper",
+    "javascript",
+    "js",
+    "data",
+    "mapper",
+    "format",
+    "data"
+  ],
+  "author": "Pablo Alexandre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PabloAlexandre/js-mapper/issues"
+  },
+  "homepage": "https://github.com/PabloAlexandre/js-mapper#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.5.0"
+  }
+}
