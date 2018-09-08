@@ -1,4 +1,4 @@
-const mapper = require('./mapper');
+const mapper = require('./jsMapper');
 
 describe('Testing mapper behavior', () => {
   it('Should return only existent values from object', () => {

@@ -1,12 +1,14 @@
 {
   "name": "js-mapper",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple data mapper to javascript",
-  "main": "index.js",
+  "main": "src/jsMapper.js",
   "scripts": {
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
-    "test": "jest src"
+    "lint": "eslint src",
+    "test": "jest src",
+    "check": "npm run lint && npm run test:coverage"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
     "format",
     "data"
   ],
-  "author": "Pablo Alexandre",
+  "author": "Pablo Alexandre <pabloalexandre.nave@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PabloAlexandre/js-mapper/issues"
