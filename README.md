@@ -1,13 +1,13 @@
-# JS Mapper
+# JS Model Mapper
 A simple data mapper for javascript. You can use to format a data to your API or format the response from your API too.
 
 ## Installation
 
-`npm install js-mapper` or `yarn js-mapper`
+`npm install js-model-mapper` or `yarn js-model-mapper`
 
 ## Usage
 
-You can use JS Mapper for many cases in your application. Bellow we have some examples:
+You can use JS Model Mapper for many cases in your application. Bellow we have some examples:
 
 ### Simple mapper
 
