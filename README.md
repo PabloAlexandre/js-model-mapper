@@ -234,3 +234,6 @@ const output = parse({
 **Note: If you need to transform this field, the transformation will be applied only if condition is satisfied.
 
 ## Contributing
+
+If you want to contribute to js-model-mapper, check the file CONTRIBUTE.md to learn how to contribute.
+
