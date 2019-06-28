@@ -53,7 +53,7 @@ describe('Testing mapper behavior', () => {
   });
 
   it('Should not appy transform function when mapper key doesn\'t exists', () => {
-    const mapperValues = [{ name: 'nonExistent', transform: jest.fn() }];
+    const mapperValues = [{ name: 'nonExistent', from: 'nonExists', transform: jest.fn() }];
     const payload = { title: 'MyTitle' };
 
     expect(mapper(mapperValues)(payload)).toStrictEqual({});
@@ -102,5 +102,31 @@ describe('Testing mapper behavior', () => {
     const payload = { title: 'MyTitle', author: 'MyAuthor' };
 
     expect(mapper(mapperValues)(payload)).toStrictEqual(payload);
+  });
+
+  it('Should apply transform even if only name attribute is defined in mapperOptions', () => {
+    const mapperValues = [{
+      name: 'history',
+      transform: (_, { primary, secondary, tertiary }) => ({
+        primary,
+        secondary,
+        tertiary,
+      }),
+    }];
+    const payload = {
+      primary: {
+        value: 'PRIMARY',
+      },
+      secondary: {
+        value: 'SECONDARY',
+      },
+      tertiary: {
+        value: 'TERTIARY',
+      },
+    };
+
+    expect(mapper(mapperValues)(payload)).toStrictEqual({
+      history: payload,
+    });
   });
 });
