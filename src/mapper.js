@@ -20,7 +20,7 @@ const handleObjectMapperOption = (obj, mapperOption) => {
   if (mapperOption.shouldApply) {
     const { condition, field } = mapperOption.shouldApply;
     const conditionValue = get(obj, field);
-    if (conditionValue === undefined || !condition(conditionValue, obj)) return {};
+    if ((field && conditionValue === undefined) || !condition(conditionValue, obj)) return {};
   }
 
   if (mapperOption.transform) {
