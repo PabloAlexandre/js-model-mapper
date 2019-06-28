@@ -13,7 +13,7 @@ const handleObjectMapperOption = (obj, mapperOption) => {
   const newKey = mapperOption.name;
   const value = get(obj, path);
 
-  if (value === undefined) {
+  if (value === undefined && (mapperOption.from && mapperOption.transform)) {
     return {};
   }
 
