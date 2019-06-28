@@ -1,6 +1,6 @@
 {
   "name": "js-model-mapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple data mapper to javascript",
   "main": "src/mapper.js",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/PabloAlexandre/js-model-mapper#readme",
   "devDependencies": {
-    "eslint": "^5.5.0",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.5.0"
