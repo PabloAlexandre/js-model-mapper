@@ -1,6 +1,6 @@
 {
   "name": "js-model-mapper",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A simple data mapper to javascript",
   "main": "src/mapper.js",
   "scripts": {
