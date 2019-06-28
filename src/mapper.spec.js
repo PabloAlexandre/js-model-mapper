@@ -77,10 +77,11 @@ describe('Testing mapper behavior', () => {
     const mapperValues = [{
       name: 'message',
       shouldApply: {
+        field: 'title',
         condition: country => country !== 'Brazil',
       },
     }];
-    const payload = { country: 'Brazil', message: 'this content is available in your country' };
+    const payload = { country: 'Holland', message: 'this content is available in your country' };
 
     expect(mapper(mapperValues)(payload)).toStrictEqual({ });
   });
@@ -128,5 +129,15 @@ describe('Testing mapper behavior', () => {
     expect(mapper(mapperValues)(payload)).toStrictEqual({
       history: payload,
     });
+  });
+
+  it('Should apply mapping only when condition fn is true, without lookup condition field', () => {
+    const mapperValues = [{
+      name: 'country',
+      shouldApply: { condition: (_, data) => data.country === 'Brazil' },
+    }];
+
+    expect(mapper(mapperValues)({ country: 'Brazil' })).toStrictEqual({ country: 'Brazil' });
+    expect(mapper(mapperValues)({ country: 'France' })).toStrictEqual({});
   });
 });
